@@ -16,7 +16,9 @@ body {
     align-items: center;
     padding-inline: 23px;
     padding-top: 10px;
-    background-color: #807e7e; /* optional: gives a light background */
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+    background-color: #030927; 
+    
   }
   abbr {
     text-decoration: none !important;
@@ -25,25 +27,83 @@ body {
   }
   
   
-  
   .heading{
     font-size: 50px;
     margin:0;
     color: white;
 }
 
-nav a{
-    margin-right: 150px;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 22px;
+nav a {
+  position: relative;
+  margin-right: 150px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  transition: color 0.35s ease, transform 0.35s ease;
 }
-  
-nav a:hover{
-  transition: 0.4s;
-  color:rgb(219, 3, 3);
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: -2px;
+  background-image: linear-gradient(to right, #ff4e50, #f9d423); /* gradient underline */
+  transition: width 0.35s ease;
 }
-nav a:active{
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color:goldenrod}
+
+nav a:active {
   transition: 0.2s;
-  color:rgb(0, 255, 8);
+  color: rgb(0, 255, 8);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  animation: popUp 1s ease-out;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  animation: fadeIn 2s ease;
+}
+
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
