@@ -217,12 +217,11 @@ width: 0;
     opacity: 1;
   }
 }
-/*Slider section*/
+/*Slider section
 .skill_slider{
   width: 100%;
   border: 2px solid goldenrod;
   height: var(--height);
- 
 }
 
 .skill_slider .list{
@@ -230,13 +229,48 @@ width: 0;
   width: 100%;
    min-width: calc(var(--width)*6);
 
-}
-.skill_slider .list .item{
- height: var(--height);
- width: var(--width);
- 
-}
+}*/
+
 .skill_slider .list .item img {
-   width:100%;
-   
+   width: 100px;
+   height: 100px;
+   object-fit: contain;
 }
+.skill_slider{
+  width: 100%;
+  border: 2px solid goldenrod;
+  height: var(--height);
+  padding: 7px;
+  background-color: whitesmoke;
+}
+
+.skill_slider .list{
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width)*var(--quantity));
+  position: relative;
+}
+.skill_slider .item {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  animation: scroll_eff 6s linear infinite;
+}
+
+/* Add staggered animation delays */
+.skill_slider .item:nth-child(1) { animation-delay: 0s; }
+.skill_slider .item:nth-child(2) { animation-delay: 1s; }
+.skill_slider .item:nth-child(3) { animation-delay: 2s; }
+.skill_slider .item:nth-child(4) { animation-delay: 3s; }
+.skill_slider .item:nth-child(5) { animation-delay: 4s; }
+.skill_slider .item:nth-child(6) { animation-delay: 5s; }
+
+@keyframes scroll_eff {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -150px;
+  }
+}
+
