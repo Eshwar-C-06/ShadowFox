@@ -217,3 +217,26 @@ width: 0;
     opacity: 1;
   }
 }
+/*Slider section*/
+.skill_slider{
+  width: 100%;
+  border: 2px solid goldenrod;
+  height: var(--height);
+ 
+}
+
+.skill_slider .list{
+  display: flex;
+  width: 100%;
+   min-width: calc(var(--width)*6);
+
+}
+.skill_slider .list .item{
+ height: var(--height);
+ width: var(--width);
+ 
+}
+.skill_slider .list .item img {
+   width:100%;
+   
+}
