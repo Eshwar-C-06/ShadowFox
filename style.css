@@ -109,6 +109,12 @@ hr{
   background-image: linear-gradient(to left,goldenrod,white);
   animation: slash 0.8s ease-in-out forwards;
 }
+
+.about-container p{
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  
+}
  
 @keyframes slash{
   0% {
