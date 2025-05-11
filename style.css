@@ -254,23 +254,43 @@ width: 0;
   width: 100px;
   height: 100px;
   position: absolute;
-  animation: scroll_eff 6s linear infinite;
+  animation: scroll_eff 10s linear infinite;
+  overflow: hidden;
+  z-index: 1;
 }
 
-/* Add staggered animation delays */
-.skill_slider .item:nth-child(1) { animation-delay: 0s; }
-.skill_slider .item:nth-child(2) { animation-delay: 1s; }
-.skill_slider .item:nth-child(3) { animation-delay: 2s; }
-.skill_slider .item:nth-child(4) { animation-delay: 3s; }
-.skill_slider .item:nth-child(5) { animation-delay: 4s; }
-.skill_slider .item:nth-child(6) { animation-delay: 5s; }
+.skill_slider .item:nth-child(1) {
+  left: 100%;
+  animation-delay: 0s;
+}
+.skill_slider .item:nth-child(2) {
+  left: 120%;
+  animation-delay: 2s;
+}
+.skill_slider .item:nth-child(3) {
+  left: 140%;
+  animation-delay: 4s;
+}
+.skill_slider .item:nth-child(4) {
+  left: 160%;
+  animation-delay: 6s;
+}
+.skill_slider .item:nth-child(5) {
+  left: 180%;
+  animation-delay: 8s;
+}
+.skill_slider .item:nth-child(6) {
+  left: 200%;
+  animation-delay: 10s;
+}
+
 
 @keyframes scroll_eff {
   0% {
     left: 100%;
   }
   100% {
-    left: -150px;
+    left: -10px;
   }
 }
 
