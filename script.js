@@ -9,3 +9,5 @@ function Typewriter(){
     }
 }
 window.onload = Typewriter();
+var sidenav=document.querySelector('.side-navbar');
+sidenav.style.display="block";
