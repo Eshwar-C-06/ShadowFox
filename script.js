@@ -9,5 +9,15 @@ function Typewriter(){
     }
 }
 window.onload = Typewriter();
+
+/*Side navigation bar*/
+
 var sidenav=document.querySelector('.side-navbar');
-sidenav.style.display="block";
+function ShowNavBar()
+{
+sidenav.style.left="0";
+}
+function CloseNavBar()
+{
+sidenav.style.left="-40%";
+}

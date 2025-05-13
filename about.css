@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(to right, #030927, #1a0a0a);
+  color: whitesmoke;
+}
+.about-landing{
+     padding: 2rem;
+     position: relative;
+}
+
+.back-home{position: absolute;
+  top: 20px;
+  font-size: 20px;
+  right: 30px;
+  background-color: goldenrod;
+  color: #030927;
+  padding: 10px 15px;
+  border-radius: 30px;
+  text-decoration:none;
+  transition: colour 0.5s,background-color 0.3s;
+}
+.back-home:hover {
+  background-color: whitesmoke;
+  color: goldenrod;
+}
