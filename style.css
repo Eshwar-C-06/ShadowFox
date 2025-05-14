@@ -8,8 +8,14 @@
   padding: 0;
   min-height: 100vh; 
 }
-
-  .nav-bar {
+html, body {
+  overflow-x: hidden;
+}
+  .nav-bar {position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 450;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,24 +29,25 @@
     text-decoration: none !important;
     border-bottom: none !important;
     display: inline-block;
-  }
-  
-  
+  }  
+
   .heading{
     font-size: 50px;
     margin:0;
     color: white;
 }
-.nav-icon{
+.nav-icon {
   color: white;
   font-size: 24px;
   background-color: goldenrod;
-  border:2px none white;
   padding: 6px 6px;
   border-radius: 12px;
   display: none;
+  margin-right: 30px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
 }
-/*Side bar Media query and content*/
 .side-navbar{
   width: 30%;
   background-color: #cc9900;
@@ -71,8 +78,6 @@
 .side-navbar .side-navbar-links a:hover{
   text-decoration: underline;
 }
-
-/*Media query for navigation bar*/
 @media screen and (max-width:1023px){
 .nav-icon{
   display: block;
@@ -130,7 +135,7 @@ hr{
   width:100vw;
   color: white;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 150px;
   padding-bottom: 120px;
 }
 .hero-text a{
@@ -292,6 +297,7 @@ width: 0;
   }
 }
 .skill_slider{
+  position: relative; 
   width: 100%;
   border:1px solid gold;
   height:var(--height);
@@ -473,6 +479,79 @@ width: 0;
   font-size: 3rem;
   text-shadow: 0 0 10px rgb(116, 99, 3);
 }
+.contact-message {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #f9d423;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+}
+
+.contact-extra {
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-extra .location {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.available {
+  font-size: 0.95rem;
+  padding: 6px 16px;
+  border: 2px solid #f9d423;
+  border-radius: 20px;
+  color: #f9d423;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.available:hover {
+  background-color: #f9d423;
+  color: #030927;
+}
+
+.resume-btn-down {
+  display: inline-block;
+  padding: 12px 26px;
+  background: linear-gradient(to right, #ffd700, #ffae00);
+  color: #030927;
+  font-weight: bold;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease, background-image 0.3s ease;
+  box-shadow: 0 4px 14px rgba(255, 193, 7, 0.3);
+}
+.resume-btn-down:hover {
+  background-image: linear-gradient(to right, #423cde, #ffd700);
+  color: #030927;
+  animation: shaking 0.5s ease-in-out;
+  
+}
+@keyframes shaking{
+  0%{
+    transform: rotate(0deg) translateX(0px);
+  }
+  25%{
+    transform: rotate(-5deg) translateX(-10px);
+  }
+  50%{
+    transform: rotate(0deg) translateX(0px);
+  }
+  75%{
+     transform: rotate(5deg) translateX(10px);
+  }
+  100%{
+     transform: rotate(0deg) translateX(0px);
+  }
+}
 
 .zen-footer {
   background-color: #2c2d4a;
@@ -495,13 +574,12 @@ width: 0;
 }
 
 .footer-left p {
-    margin: 5px 0; /* Add some spacing between the lines */
+    margin: 5px 0; 
 }
 
 .footer-right {
     display: flex;
-    gap: 10px; /* Reduced gap for a tighter look */
-}
+    gap: 10px; 
 
 .footer-icon {
     position: relative;
@@ -519,8 +597,8 @@ width: 0;
 }
 
 .footer-icon:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
-    background: #4d16ff; /* Darker background on hover */
+    transform: translateY(-5px); 
+    background: #4d16ff; 
 }
 .footer-icon i {
   font-size: 20px;
@@ -587,14 +665,3 @@ width: 0;
   mix-blend-mode: difference;
   transition: 0.1s
 }
-/*----------About page-----------*/
-body{
-  
-}
-
-
-
-
-
-
-
