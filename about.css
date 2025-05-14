@@ -50,7 +50,8 @@ body{
 }
 
 .zen-img {
-  width: 250px;
+  width: 280px;
+  height: 420px;
   border-radius: 12px;
   filter: grayscale(1) contrast(1.1);
 }
@@ -92,6 +93,7 @@ body{
 
 .stat-card:hover {
   transform: scale(1.05);
+  cursor: pointer;
 }
 .stat-card i {
   font-size: 24px;
@@ -121,7 +123,6 @@ body{
   color: goldenrod;
   transform: scale(1.1);
 }
-
 /* Responsive Text */
 @media screen and (max-width: 768px) {
   .about-intro h1 {

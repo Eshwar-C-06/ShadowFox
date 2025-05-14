@@ -57,7 +57,7 @@ html, body {
   left:-40%;
   padding: 20px;  
   font-size: 28px;
-  z-index: 500;
+  z-index: 600;
   transition: 1.4s;
 }
 .side-navbar:hover{
@@ -157,6 +157,7 @@ display: inline-block;
   color: goldenrod;
   transform: scale(1.15);
 }
+
 
 .hero_img{
   position: relative;
@@ -580,7 +581,7 @@ width: 0;
 .footer-right {
     display: flex;
     gap: 10px; 
-
+}
 .footer-icon {
     position: relative;
     background: #2c2d4a;
@@ -641,7 +642,7 @@ width: 0;
   0% { opacity: 0; transform: translateX(-50%) scale(0.8); }
   100% { opacity: 1; transform: translateX(-50%) scale(1); }
 }
-
+/*Cursor design*/
 .inner-cursor,
 .outer-cursor {
   pointer-events: none; 
@@ -655,7 +656,7 @@ width: 0;
   border-radius: 50%;
   background-color: white;
   mix-blend-mode: difference;
-  transition: width 0.5s heigth 0.5s;
+  transition: width 0.5s height 0.5s;
 }
 .outer-cursor{
   width: 28px;;
